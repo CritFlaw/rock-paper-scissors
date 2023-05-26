@@ -1,0 +1,143 @@
+* {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  /* text-align: center; */
+  /* outline: 2px red solid; */
+}
+
+body {
+  background-color: rgb(46, 46, 46);
+  /* background: none; */
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.background--video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.container div {
+  display: flex;
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+.emojis p {
+  font-size: 60px;
+}
+
+.header,
+.title,
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.score {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 24px;
+  margin: 0px 500px;
+}
+
+.score--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.score .result--text {
+  width: 100px;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.choice--container {
+  display: flex;
+  width: 100px;
+}
+
+.choice {
+  font-size: 95px;
+}
+
+.shake {
+  animation-name: wiggle;
+  animation-duration: 0.7s;
+  animation-iteration-count: 3;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate((-45deg));
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.score img {
+  height: 200px;
+}
+
+.interface {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.btn {
+  /* border: 2px rgb(29, 137, 159) solid; */
+  border: none;
+  border-radius: 20px;
+  background: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  font-size: 60px;
+}
+
+.btn:hover {
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+.btn:active {
+  transform: translate(0, 20px);
+}
+
+.footer {
+  margin-top: auto;
+  margin-bottom: 10px;
+}
