@@ -60,14 +60,19 @@ h3 {
   margin: 0px 500px;
 }
 
+.score--text {
+  opacity: 0;
+  transition: all 2s;
+}
+
 .score--container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.score .result--text {
-  width: 100px;
+.result--text {
+  width: 200px;
 }
 
 .result {
