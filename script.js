@@ -96,7 +96,7 @@ interface.addEventListener("click", function (e) {
 
       // console.log(`Animation has ended`);
     });
-    const compChoice = "✋"; //computerChoice();
+    const compChoice = computerChoice();
     // console.log(`PC: ${compChoice}`);
     const humChoice = e.target.textContent;
     // console.log(`You: ${humChoice}`);
