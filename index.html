@@ -31,22 +31,22 @@
         </div> -->
       </div>
       <div class="score">
-        <div class="computer--choice choice--container">
-          <p class="computer--choice--text choice">✊</p>
-        </div>
-        <div class="computer--container score--container">
-          <img src="assets/svgs/computer.svg" alt="computer" class="computer" />
-          <p class="computer--score--text score--text">0</p>
-        </div>
-        <div class="result">
-          <p class="result--text">Whenever you're ready 🙂</p>
-        </div>
         <div class="human--container score--container">
           <img src="assets/svgs/person-2.svg" alt="" class="person" />
           <p class="human--score--text score--text">0</p>
         </div>
         <div class="human--choice choice--container">
           <p class="human--choice--text choice">✊</p>
+        </div>
+        <div class="result">
+          <p class="result--text">Whenever you're ready 🙂</p>
+        </div>
+        <div class="computer--choice choice--container">
+          <p class="computer--choice--text choice">✊</p>
+        </div>
+        <div class="computer--container score--container">
+          <img src="assets/svgs/computer.svg" alt="computer" class="computer" />
+          <p class="computer--score--text score--text">0</p>
         </div>
       </div>
       <div class="interface">
@@ -55,6 +55,15 @@
         <button class="btn scissors--button">✌</button>
       </div>
       <div class="footer">Copyright © 2023 Ted Mihu</div>
+    </div>
+    <div class="overlay hidden"></div>
+    <div class="result--modal hidden">
+      <h2 class="result--modal--title">You won!</h2>
+      <p class="result--modal--text">Would you like to play again?</p>
+      <div class="game--over--options">
+        <a href="" class="yes--please modal--buttons">Yes please!</a>
+        <a href="" class="no--im--good modal--buttons">No, I'm good</a>
+      </div>
     </div>
   </body>
 </html>
