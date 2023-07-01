@@ -6,7 +6,6 @@
 
 body {
   background-color: rgb(46, 46, 46);
-  /* background: none; */
   margin: 0;
   padding: 0;
 }
@@ -19,6 +18,32 @@ h2 {
   margin: 0;
 }
 
+.container {
+  background-color: rgb(46, 46, 46);
+}
+
+.blowUp {
+  animation-name: blow-up;
+  animation-duration: 0.7s;
+  animation-iteration-count: 1;
+}
+
+@keyframes blow-up {
+  0% {
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    opacity: 0;
+    scale: 2;
+  }
+}
+
+.overlay,
+.result--modal {
+  transition: all 1s;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -28,17 +53,19 @@ h2 {
   background-color: rgba(203, 203, 203, 0.6);
   backdrop-filter: blur(12px);
   z-index: 5;
+  opacity: 1;
 }
 
 div.hidden {
-  transform: translate(-500%);
   opacity: 0;
-  transition: opacity 1s;
+  transition: all 1s;
+  z-index: -1;
 }
 
-div.shown {
-  transition: opacity 1s;
-  opacity: 1;
+button.hidden {
+  /* transition: z-index 3s; */
+  opacity: 0;
+  z-index: -1;
 }
 
 .result--modal {
@@ -46,14 +73,13 @@ div.shown {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -80%);
-  width: 400px;
-  height: 200px;
+  width: 600px;
+  height: 300px;
   z-index: 10;
   background-color: rgb(234, 234, 234);
   border-radius: 32px;
   color: black;
   display: flex;
-  /* transition: display 2s; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -114,6 +140,14 @@ div.shown {
 
 .container div {
   display: flex;
+  /* font-size: 32px; */
+}
+
+.header,
+.title,
+.score,
+.interface,
+.overall--score {
   font-size: 32px;
 }
 
@@ -234,6 +268,7 @@ h3 {
 
 .btn {
   /* border: 2px rgb(29, 137, 159) solid; */
+  transition: all 1s;
   border: none;
   border-radius: 20px;
   background: none;
@@ -248,6 +283,59 @@ h3 {
 
 .btn:active {
   transform: translate(0, 20px);
+}
+
+.btn:disabled {
+  filter: saturate(0);
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.changed--mind {
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+  width: 300px;
+  height: 80px;
+  border-radius: 16px;
+  padding: 20px 20px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  background-color: #576165;
+  position: absolute;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.changed--mind:active {
+  transition: all 0.2s;
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+.overall--score {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+}
+
+.overall--score--container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.overall--line {
+  display: flex;
+  gap: 16px;
+}
+
+.rounds {
+  margin-left: auto;
+  /* background-color: yellow; */
+  /* color: black; */
 }
 
 .footer {
